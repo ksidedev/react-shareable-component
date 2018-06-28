@@ -15,11 +15,18 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react', 'es2015']
+            presets: ['env', 'react', ]
           }
         }
       }
-    ]
+    ],
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ["react-hot", "babel-loader"],
+      }
+    ],
   },
   externals: {
     'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.

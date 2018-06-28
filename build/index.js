@@ -98,16 +98,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Fancy = function (_Component) {
-  _inherits(Fancy, _Component);
+var ComponentWrapper = function (_Component) {
+  _inherits(ComponentWrapper, _Component);
 
-  function Fancy() {
-    _classCallCheck(this, Fancy);
+  function ComponentWrapper() {
+    _classCallCheck(this, ComponentWrapper);
 
-    return _possibleConstructorReturn(this, (Fancy.__proto__ || Object.getPrototypeOf(Fancy)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ComponentWrapper.__proto__ || Object.getPrototypeOf(ComponentWrapper)).apply(this, arguments));
   }
 
-  _createClass(Fancy, [{
+  _createClass(ComponentWrapper, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -122,10 +122,10 @@ var Fancy = function (_Component) {
     }
   }]);
 
-  return Fancy;
+  return ComponentWrapper;
 }(_react.Component);
 
-exports.default = Fancy;
+exports.default = ComponentWrapper;
 
 /***/ })
 /******/ ]);

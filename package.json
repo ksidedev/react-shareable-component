@@ -9,12 +9,22 @@
   "dependencies": {
     "babel-preset-react": "^6.24.1",
     "react": "^15.5.4",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.7.1",
+    "prettier": "^1.11.1",
+    "lint-staged": "^7.0.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
-    "build": "webpack"
+    "start": "webpack-dev-server --hot --inline",
+    "build": "webpack",
+    "format": "./node_modules/.bin/prettier --write --no-semi --single-quote --jsx-bracket-same-line 'src/**/*.{js,jsx,json,css,scss}'"
   },
   "author": {
     "name": "Your name",
