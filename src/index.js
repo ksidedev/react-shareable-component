@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Fancy extends Component {
+class ComponentWrapper extends Component {
   render() {
     return (
       <div>
@@ -9,4 +9,4 @@ class Fancy extends Component {
     );
   }
 }
-export default Fancy;
+export default ComponentWrapper;
